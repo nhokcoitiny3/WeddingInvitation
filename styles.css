@@ -145,7 +145,7 @@ html {
     color: #fff;
     text-decoration: none;
     font-size: 1.2rem;
-    border-radius: 5px;
+    border-radius: 25px;
     transition: all 0.3s ease;
     z-index: 11;
 }
@@ -309,7 +309,7 @@ html {
     color: #fff;
     text-decoration: none;
     font-size: 1.2rem;
-    border-radius: 5px;
+    border-radius: 25px;
     transition: all 0.3s ease;
     z-index: 11;
 }
@@ -509,17 +509,23 @@ html {
     .family-photo {
         max-width: 500px; /* Giảm kích thước trên tablet */
         margin: 15px auto;
-    }
-    .family-info {
-        font-size: 1.5rem;
-        gap: 40px;
         margin-bottom: 30px;
     }
-
-    .family-info h3 {
-        font-size: 1.8rem;
+    .family-info {
+        flex-direction: row; /* Giữ 2 cột */
     }
 
+    .bride-family h3, .groom-family h3 {
+        font-size: 1.8rem; /* Giảm nhẹ cho tablet */
+    }
+
+    .bride-family p, .groom-family p {
+        font-size: 1.5rem; /* Giảm nhẹ cho tablet */
+    }
+
+    .bride-family span, .groom-family span {
+        font-size: 1.2rem; /* Giảm nhẹ cho tablet */
+    }
     .countdown h4 {
         font-size: 2rem;
     }
@@ -615,21 +621,22 @@ html {
     .family-photo {
         max-width: 500px; /* Giảm kích thước trên phone */
         margin: 10px auto;
+        margin-bottom: 30px;
     }
     .family-info {
-        font-size: 1.2rem;
-        flex-direction: column;
-        gap: 20px;
-        margin-bottom: 20px;
-        text-align: center;
+        flex-direction: row; /* Giữ 2 cột */
     }
 
-    .bride-family, .groom-family {
-        text-align: center;
+    .bride-family h3, .groom-family h3 {
+        font-size: 1.5rem; /* Giảm thêm cho phone */
     }
 
-    .family-info h3 {
-        font-size: 1.5rem;
+    .bride-family p, .groom-family p {
+        font-size: 1.0rem; /* Giảm thêm cho phone */
+    }
+
+    .bride-family span, .groom-family span {
+        font-size: 1rem; /* Giảm thêm cho phone */
     }
 
     .countdown h4 {
@@ -661,7 +668,7 @@ html {
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.2rem;
-    border-radius: 5px;
+    border-radius: 25px;
     transition: all 0.3s ease;
     border: none;
     cursor: pointer;
@@ -957,4 +964,25 @@ html {
     height: auto;
     transform: rotate(-90deg); /* Xoay 180 độ */
     z-index: 90; /* Thấp hơn nút nhạc (z-index: 100) */
+}
+/* Map Button */
+.map-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #D32F2F;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    margin-bottom: 50px; /* Khoảng cách trên để tách khỏi địa điểm */
+    transition: background 0.3s ease;
+}
+
+.map-button:hover {
+    background: #B71C1C;
+    transform: translateY(-2px);
+    background: #FFD700;
+    color: #D32F2F;
+    transform: scale(1.05);
 }
