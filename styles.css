@@ -986,3 +986,75 @@ html {
     color: #D32F2F;
     transform: scale(1.05);
 }
+/* Overlay for blur effect */
+.overlay {
+    display: none; /* Ẩn mặc định */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Màu xám mờ */
+    backdrop-filter: blur(5px); /* Làm mờ nền */
+    z-index: 199; /* Dưới thông báo nhưng trên nội dung */
+}
+
+/* Audio Notification */
+.audio-notification {
+    display: none; /* Ẩn mặc định */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 245, 245, 0.95); /* Nền hồng nhạt, mờ nhẹ */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 200; /* Trên overlay */
+    max-width: 350px; /* Tăng chiều rộng để chứa 2 nút ngang */
+    width: 100%; /* Đảm bảo sử dụng toàn bộ max-width */
+}
+
+.audio-notification p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: #D32F2F;
+    margin: 0 0 15px 0;
+}
+
+.audio-notification .play-btn {
+    background: #D32F2F;
+    color: #fff;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    width: 100px; /* Chiều rộng cố định */
+    margin-right: 10px; /* Khoảng cách với nút "Không" bên phải */
+    transition: background 0.3s ease;
+    display: inline-block; /* Đảm bảo nút nằm ngang */
+}
+
+.audio-notification .play-btn:hover {
+    background: #b71c1c; /* Màu tối hơn khi hover */
+}
+
+.audio-notification .close-btn {
+    background: #fff; /* Nền trắng */
+    color: #D32F2F; /* Chữ đỏ */
+    border: 2px solid #D32F2F; /* Viền đỏ */
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    width: 100px; /* Chiều rộng cố định, bằng nút "Có" */
+    transition: background 0.3s ease, color 0.3s ease;
+    display: inline-block; /* Đảm bảo nút nằm ngang */
+}
+
+.audio-notification .close-btn:hover {
+    background: #D32F2F; /* Nền đỏ khi hover */
+    color: #fff; /* Chữ trắng khi hover */
+}

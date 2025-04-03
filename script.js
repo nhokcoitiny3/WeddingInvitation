@@ -122,11 +122,57 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+
+// Music Control
+const music = document.getElementById('backgroundMusic');
+const toggleBtn = document.getElementById('musicToggleBtn');
+const audioNotification = document.getElementById('audioNotification');
+const overlay = document.getElementById('overlay');
+const playMusicBtn = document.getElementById('playMusicBtn');
+const closeNotification = document.getElementById('closeNotification');
+
+let isPlaying = false;
+
+// Thử tự động phát nhạc khi trang tải
+const playMusic = () => {
+    music.play()
+        .then(() => {
+            isPlaying = true;
+            toggleBtn.innerHTML = '<i class="fas fa-volume-up"></i>';
+        })
+        .catch((error) => {
+            console.log("Autoplay bị chặn: ", error);
+            isPlaying = false;
+            toggleBtn.innerHTML = '<i class="fas fa-volume-mute"></i>';
+            audioNotification.style.display = 'block'; // Hiển thị thông báo
+            overlay.style.display = 'block'; // Hiển thị overlay mờ
+        });
+};
+
+// Chạy khi trang tải
+playMusic();
+
+// Đóng thông báo
+closeNotification.addEventListener('click', () => {
+    audioNotification.style.display = 'none';
+    overlay.style.display = 'none';
+    isPlaying = false;
+    toggleBtn.innerHTML = '<i class="fas fa-volume-mute"></i>';
+ 
+});
+// Nút "Có" - Phát nhạc ngay
+playMusicBtn.addEventListener('click', () => {
+    music.play();
+    toggleBtn.innerHTML = '<i class="fas fa-volume-up"></i>';
+    isPlaying = true;
+    audioNotification.style.display = 'none';
+    overlay.style.display = 'none';
+});
 // Music Control
 document.addEventListener('DOMContentLoaded', () => {
     const audio = document.getElementById('backgroundMusic');
     const toggleBtn = document.getElementById('musicToggleBtn');
-    let isPlaying = true;
+
 
     // Phát nhạc mặc định khi trang tải
     audio.play().catch(error => {
