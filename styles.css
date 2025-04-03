@@ -205,6 +205,8 @@ html {
         padding: 8px 15px;
         font-size: 0.9rem;
     }
+
+
 }
 
 /* Info Section */
@@ -297,6 +299,25 @@ html {
     color: #D32F2F;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
     white-space: nowrap;
+}
+
+
+.map-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background: #D32F2F;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    z-index: 11;
+}
+
+.map-button:hover {
+    background: #FFD700;
+    color: #D32F2F;
+    transform: scale(1.05);
 }
 
 @media (min-aspect-ratio: 1/1) {
@@ -511,6 +532,12 @@ html {
     .countdown-item span {
         font-size: 1.5rem;
     }
+
+    .map-button {
+        padding: 10px 20px;
+        font-size: 1rem;
+        display: inline-block;
+    }
 }
 
 @media (max-width: 480px) {
@@ -617,25 +644,13 @@ html {
     .countdown-item span {
         font-size: 1.2rem;
     }
+
+    .map-button {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
 }
 
-.map-button {
-    display: inline-block;
-    padding: 15px 30px;
-    background: #D32F2F;
-    color: #fff;
-    text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-    z-index: 11;
-}
-
-.map-button:hover {
-    background: #B71C1C;
-    transform: translateY(-2px);
-}
 
 /* Load More Button */
 .load-more-btn {
@@ -749,6 +764,11 @@ html {
         height: 100%;
         transition: transform 0.2s ease;
     }
+    
+    .map-button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
 
     .load-more-btn {
         padding: 10px 20px;
@@ -775,6 +795,7 @@ html {
     .gallery-item {
         aspect-ratio: 3/4;
     }
+
 
     .load-more-btn {
         padding: 8px 20px;

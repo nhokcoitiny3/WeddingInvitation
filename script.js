@@ -33,7 +33,6 @@ particlesJS('particles-js', {
 
 // AOS Initialization
 AOS.init({
-    once: true
 });
 
 // Countdown Timer
@@ -112,3 +111,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const familyPhotoLink = document.querySelector('.family-photo-link');
+    lightGallery(familyPhotoLink, {
+        thumbnail: true,
+        animateThumb: true,
+        showThumbByDefault: false,
+        download: false, // Tùy chọn: tắt nút tải xuống
+    });
+});
+
