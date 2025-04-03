@@ -25,6 +25,7 @@ html {
     pointer-events: none;
     z-index: 5;
 }
+
 .petal {
     position: absolute;
     width: 20px;
@@ -34,22 +35,72 @@ html {
     animation: fall linear infinite;
 }
 
-.petal:nth-child(1) { left: 10%; animation-duration: 10s; animation-delay: 0s; }
-.petal:nth-child(2) { left: 20%; animation-duration: 12s; animation-delay: 2s; }
-.petal:nth-child(3) { left: 30%; animation-duration: 8s; animation-delay: 4s; }
-.petal:nth-child(4) { left: 40%; animation-duration: 11s; animation-delay: 1s; }
-.petal:nth-child(5) { left: 50%; animation-duration: 9s; animation-delay: 3s; }
-.petal:nth-child(6) { left: 60%; animation-duration: 13s; animation-delay: 5s; }
-.petal:nth-child(7) { left: 70%; animation-duration: 7s; animation-delay: 2s; }
-.petal:nth-child(8) { left: 80%; animation-duration: 10s; animation-delay: 0s; }
-.petal:nth-child(9) { left: 90%; animation-duration: 12s; animation-delay: 3s; }
-.petal:nth-child(10) { left: 95%; animation-duration: 9s; animation-delay: 1s; }
+.petal:nth-child(1) {
+    left: 10%;
+    animation-duration: 10s;
+    animation-delay: 0s;
+}
+
+.petal:nth-child(2) {
+    left: 20%;
+    animation-duration: 12s;
+    animation-delay: 2s;
+}
+
+.petal:nth-child(3) {
+    left: 30%;
+    animation-duration: 8s;
+    animation-delay: 4s;
+}
+
+.petal:nth-child(4) {
+    left: 40%;
+    animation-duration: 11s;
+    animation-delay: 1s;
+}
+
+.petal:nth-child(5) {
+    left: 50%;
+    animation-duration: 9s;
+    animation-delay: 3s;
+}
+
+.petal:nth-child(6) {
+    left: 60%;
+    animation-duration: 13s;
+    animation-delay: 5s;
+}
+
+.petal:nth-child(7) {
+    left: 70%;
+    animation-duration: 7s;
+    animation-delay: 2s;
+}
+
+.petal:nth-child(8) {
+    left: 80%;
+    animation-duration: 10s;
+    animation-delay: 0s;
+}
+
+.petal:nth-child(9) {
+    left: 90%;
+    animation-duration: 12s;
+    animation-delay: 3s;
+}
+
+.petal:nth-child(10) {
+    left: 95%;
+    animation-duration: 9s;
+    animation-delay: 1s;
+}
 
 @keyframes fall {
     0% {
         transform: translateY(-100px) rotate(0deg);
         opacity: 1;
     }
+
     100% {
         transform: translateY(100vh) rotate(360deg);
         opacity: 0;
@@ -223,7 +274,7 @@ html {
 }
 
 .info-content {
-     position: relative; 
+    position: relative;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -232,7 +283,7 @@ html {
     position: absolute;
     top: -15px;
     left: -15px;
-    width: 200px; 
+    width: 200px;
     height: auto;
     z-index: 12;
 }
@@ -245,11 +296,13 @@ html {
     height: auto;
     z-index: 12;
 }
+
 .info-content h2 {
     font-family: 'Great Vibes', cursive;
     font-size: 3rem;
     color: #D32F2F;
-    margin-bottom: 10px; /* Khoảng cách với chữ Hỷ */
+    margin-bottom: 10px;
+    /* Khoảng cách với chữ Hỷ */
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
     position: relative;
     z-index: 11;
@@ -257,8 +310,10 @@ html {
 
 .hy-image {
     display: block;
-    margin: 0 auto 20px auto; /* Khoảng cách dưới với lời mời */
-    width: 150px; /* Kích thước trên desktop */
+    margin: 0 auto 20px auto;
+    /* Khoảng cách dưới với lời mời */
+    width: 150px;
+    /* Kích thước trên desktop */
     height: auto;
 }
 
@@ -266,7 +321,8 @@ html {
     font-family: 'Great Vibes', cursive;
     font-size: 1.8rem;
     color: #D32F2F;
-    margin-bottom: 30px; /* Khoảng cách với nội dung bên dưới */
+    margin-bottom: 30px;
+    /* Khoảng cách với nội dung bên dưới */
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
@@ -275,7 +331,8 @@ html {
     justify-content: center;
     flex-wrap: wrap;
     gap: 40px;
-    margin-bottom: 40px; /* Khoảng cách với divider */
+    margin-bottom: 40px;
+    /* Khoảng cách với divider */
 }
 
 .info-item {
@@ -288,7 +345,8 @@ html {
     text-align: center;
 }
 
-.info-time, .info-location {
+.info-time,
+.info-location {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -314,6 +372,24 @@ html {
     z-index: 11;
 }
 
+.showalbum-button:hover {
+    background: #FFD700;
+    color: #D32F2F;
+    transform: scale(1.05);
+}
+
+.showalbum-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background: #D32F2F;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    z-index: 11;
+}
+
 .map-button:hover {
     background: #FFD700;
     color: #D32F2F;
@@ -321,26 +397,32 @@ html {
 }
 
 @media (min-aspect-ratio: 1/1) {
-    .info-time, .info-location {
+
+    .info-time,
+    .info-location {
         align-items: flex-start;
         text-align: left;
         justify-content: center;
     }
 }
 
-.info-time i, .info-location i {
+.info-time i,
+.info-location i {
     font-size: 2rem;
     color: #D32F2F;
 }
 
-.info-time span, .info-location span {
+.info-time span,
+.info-location span {
     font-weight: 600;
     color: #D32F2F;
 }
 
 .info-location .location-content {
-    display: inline; /* Mặc định trên desktop */
-    font-weight: 400; /* Bỏ in đậm trên desktop */
+    display: inline;
+    /* Mặc định trên desktop */
+    font-weight: 400;
+    /* Bỏ in đậm trên desktop */
 }
 
 .divider {
@@ -349,7 +431,8 @@ html {
     height: 2px;
     background-color: #D32F2F;
     border: none;
-    margin: 0 auto 30px auto; /* Khoảng cách trên dưới */
+    margin: 0 auto 30px auto;
+    /* Khoảng cách trên dưới */
     opacity: 0.8;
 }
 
@@ -357,7 +440,8 @@ html {
     font-family: 'Great Vibes', cursive;
     font-size: 2.5rem;
     color: #D32F2F;
-    margin-bottom: 20px; /* Khoảng cách với family-info */
+    margin-bottom: 20px;
+    /* Khoảng cách với family-info */
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
@@ -365,14 +449,16 @@ html {
     display: flex;
     justify-content: center;
     gap: 60px;
-    margin-bottom: 40px; /* Khoảng cách với countdown */
+    margin-bottom: 40px;
+    /* Khoảng cách với countdown */
     font-family: 'Great Vibes', cursive;
     font-size: 1.8rem;
     color: #D32F2F;
 }
 
-.bride-family, .groom-family {
-    text-align: left;
+.bride-family,
+.groom-family {
+    text-align: center;
 }
 
 .family-info h3 {
@@ -387,12 +473,14 @@ html {
 }
 
 .family-info span {
-    font-weight: 600; /* Tên phụ huynh in đậm */
+    font-weight: 600;
+    /* Tên phụ huynh in đậm */
 }
 
 /* Countdown */
 .countdown {
-    margin-top: 0; /* Bỏ margin-top vì family-info đã tạo khoảng cách */
+    margin-top: 0;
+    /* Bỏ margin-top vì family-info đã tạo khoảng cách */
 }
 
 .countdown h4 {
@@ -428,11 +516,15 @@ html {
 .family-photo {
     display: block;
     width: 100%;
-    max-width: 700px; /* Kích thước tối đa trên desktop */
+    max-width: 700px;
+    /* Kích thước tối đa trên desktop */
     height: auto;
-    margin: 20px auto; /* Căn giữa và tạo khoảng cách với tiêu đề/family-info */
-    border-radius: 10px; /* Bo góc cho ảnh */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hiệu ứng bóng nhẹ */
+    margin: 20px auto;
+    /* Căn giữa và tạo khoảng cách với tiêu đề/family-info */
+    border-radius: 10px;
+    /* Bo góc cho ảnh */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Hiệu ứng bóng nhẹ */
 }
 
 /* Responsive Info Section */
@@ -444,7 +536,7 @@ html {
     .decor-left {
         top: -10px;
         left: -10px;
-        width: 150px; 
+        width: 150px;
     }
 
     .decor-right {
@@ -468,19 +560,22 @@ html {
         margin-bottom: 20px;
     }
 
-    .info-time, .info-location {
+    .info-time,
+    .info-location {
         display: block;
         text-align: center;
         white-space: normal;
     }
 
-    .info-time i, .info-location i {
+    .info-time i,
+    .info-location i {
         font-size: 1.5rem;
         display: block;
         margin: 0 auto 10px auto;
     }
 
-    .info-time span, .info-location span {
+    .info-time span,
+    .info-location span {
         display: block;
         font-size: 1.5rem;
         font-weight: 600;
@@ -506,26 +601,37 @@ html {
         font-size: 2rem;
         margin-bottom: 15px;
     }
+
     .family-photo {
-        max-width: 500px; /* Giảm kích thước trên tablet */
+        max-width: 500px;
+        /* Giảm kích thước trên tablet */
         margin: 15px auto;
         margin-bottom: 30px;
     }
+
     .family-info {
-        flex-direction: row; /* Giữ 2 cột */
+        flex-direction: row;
+        /* Giữ 2 cột */
     }
 
-    .bride-family h3, .groom-family h3 {
-        font-size: 1.8rem; /* Giảm nhẹ cho tablet */
+    .bride-family h3,
+    .groom-family h3 {
+        font-size: 1.8rem;
+        /* Giảm nhẹ cho tablet */
     }
 
-    .bride-family p, .groom-family p {
-        font-size: 1.5rem; /* Giảm nhẹ cho tablet */
+    .bride-family p,
+    .groom-family p {
+        font-size: 1.5rem;
+        /* Giảm nhẹ cho tablet */
     }
 
-    .bride-family span, .groom-family span {
-        font-size: 1.2rem; /* Giảm nhẹ cho tablet */
+    .bride-family span,
+    .groom-family span {
+        font-size: 1.2rem;
+        /* Giảm nhẹ cho tablet */
     }
+
     .countdown h4 {
         font-size: 2rem;
     }
@@ -544,6 +650,12 @@ html {
         font-size: 1rem;
         display: inline-block;
     }
+
+    .showalbum-button {
+        padding: 10px 20px;
+        font-size: 1rem;
+        display: inline-block;
+    }
 }
 
 @media (max-width: 480px) {
@@ -551,7 +663,7 @@ html {
     .decor-left {
         top: -5px;
         left: -5px;
-        width: 100px; 
+        width: 100px;
     }
 
     .decor-right {
@@ -579,20 +691,23 @@ html {
         padding: 20px;
     }
 
-    .info-time, .info-location {
+    .info-time,
+    .info-location {
         display: block;
         font-size: 1.2rem;
         text-align: center;
         white-space: normal;
     }
 
-    .info-time i, .info-location i {
+    .info-time i,
+    .info-location i {
         font-size: 1.2rem;
         display: block;
         margin: 0 auto 8px auto;
     }
 
-    .info-time span, .info-location span {
+    .info-time span,
+    .info-location span {
         display: block;
         font-size: 1.2rem;
         font-weight: 600;
@@ -618,25 +733,35 @@ html {
         font-size: 1.8rem;
         margin-bottom: 10px;
     }
+
     .family-photo {
-        max-width: 500px; /* Giảm kích thước trên phone */
+        max-width: 500px;
+        /* Giảm kích thước trên phone */
         margin: 10px auto;
         margin-bottom: 30px;
     }
+
     .family-info {
-        flex-direction: row; /* Giữ 2 cột */
+        flex-direction: row;
+        /* Giữ 2 cột */
     }
 
-    .bride-family h3, .groom-family h3 {
-        font-size: 1.5rem; /* Giảm thêm cho phone */
+    .bride-family h3,
+    .groom-family h3 {
+        font-size: 1.5rem;
+        /* Giảm thêm cho phone */
     }
 
-    .bride-family p, .groom-family p {
-        font-size: 1.0rem; /* Giảm thêm cho phone */
+    .bride-family p,
+    .groom-family p {
+        font-size: 1.0rem;
+        /* Giảm thêm cho phone */
     }
 
-    .bride-family span, .groom-family span {
-        font-size: 1rem; /* Giảm thêm cho phone */
+    .bride-family span,
+    .groom-family span {
+        font-size: 1rem;
+        /* Giảm thêm cho phone */
     }
 
     .countdown h4 {
@@ -656,7 +781,13 @@ html {
         padding: 8px 15px;
         font-size: 0.9rem;
     }
+
+    .showalbum-button {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
 }
+
 
 
 /* Load More Button */
@@ -750,14 +881,14 @@ html {
     .gallery-section {
         padding: 20px 10px;
     }
-    
+
     .gallery-grid {
         grid-template-columns: repeat(3, 1fr);
         gap: 8px;
         padding: 8px;
         margin-bottom: 30px;
     }
-    
+
     .gallery-item {
         aspect-ratio: 3/4;
     }
@@ -771,7 +902,7 @@ html {
         height: 100%;
         transition: transform 0.2s ease;
     }
-    
+
     .map-button {
         padding: 10px 20px;
         font-size: 1rem;
@@ -842,6 +973,7 @@ html {
 .lg-thumb-item:hover {
     border-color: #D32F2F;
 }
+
 /* Music Toggle Button */
 .music-toggle-btn {
     position: fixed;
@@ -870,23 +1002,29 @@ html {
 }
 
 .music-toggle-btn.muted .fas {
-    content: '\f6a9'; /* Icon mute */
+    content: '\f6a9';
+    /* Icon mute */
 }
+
 /* Thank You Section */
 .thankyou-section {
     padding: 80px 20px;
-    background: #FFF5F5; /* Màu nền giống info-section */
+    background: #FFF5F5;
+    /* Màu nền giống info-section */
     text-align: center;
     position: relative;
     z-index: 2;
-    min-height: 200px; /* Đảm bảo section có chiều cao tối thiểu */
-    overflow: visible; /* Ngăn nội dung bị cắt */
+    min-height: 200px;
+    /* Đảm bảo section có chiều cao tối thiểu */
+    overflow: visible;
+    /* Ngăn nội dung bị cắt */
 }
 
 .thankyou-content {
     max-width: 800px;
     margin: 0 auto;
-    position: relative; /* Đảm bảo nội dung nằm trên các phần tử khác */
+    position: relative;
+    /* Đảm bảo nội dung nằm trên các phần tử khác */
     z-index: 3;
 }
 
@@ -910,7 +1048,8 @@ html {
 @media (max-width: 1024px) {
     .thankyou-section {
         padding: 50px 15px;
-        min-height: 350px; /* Tăng chiều cao tối thiểu cho tablet */
+        min-height: 350px;
+        /* Tăng chiều cao tối thiểu cho tablet */
     }
 
     .thankyou-content h2 {
@@ -925,7 +1064,8 @@ html {
 @media (max-width: 480px) {
     .thankyou-section {
         padding: 30px 10px;
-        min-height: 350px; /* Tăng chiều cao tối thiểu cho phone */
+        min-height: 350px;
+        /* Tăng chiều cao tối thiểu cho phone */
     }
 
     .thankyou-content h2 {
@@ -934,37 +1074,52 @@ html {
 
     .thankyou-content p {
         font-size: 1.2rem;
-        padding: 0 10px; /* Thêm padding để tránh sát lề */
+        padding: 0 10px;
+        /* Thêm padding để tránh sát lề */
     }
 }
+
 /* Section Separator */
 .section-separator {
     display: block;
-    width: 75%; /* Tăng từ 50% lên 75% */
-    max-width: 900px; /* Tăng từ 600px lên 900px để phù hợp với tỷ lệ mới */
+    width: 75%;
+    /* Tăng từ 50% lên 75% */
+    max-width: 900px;
+    /* Tăng từ 600px lên 900px để phù hợp với tỷ lệ mới */
     height: auto;
     margin: 20px auto;
     opacity: 0.8;
 }
+
 /* Corner Images */
 .corner-left {
     position: absolute;
-    bottom: 10px; /* Cách đáy trang 10px */
-    left: 10px; /* Cách mép trái 10px */
-    width: 100px; /* Kích thước tùy ý */
+    bottom: 10px;
+    /* Cách đáy trang 10px */
+    left: 10px;
+    /* Cách mép trái 10px */
+    width: 100px;
+    /* Kích thước tùy ý */
     height: auto;
-    z-index: 90; /* Thấp hơn nút nhạc (z-index: 100) */
+    z-index: 90;
+    /* Thấp hơn nút nhạc (z-index: 100) */
 }
 
 .corner-right {
     position: absolute;
-    bottom: 10px; /* Cách đáy trang 10px */
-    right: 10px; /* Cách mép phải 10px */
-    width: 100px; /* Kích thước tùy ý */
+    bottom: 10px;
+    /* Cách đáy trang 10px */
+    right: 10px;
+    /* Cách mép phải 10px */
+    width: 100px;
+    /* Kích thước tùy ý */
     height: auto;
-    transform: rotate(-90deg); /* Xoay 180 độ */
-    z-index: 90; /* Thấp hơn nút nhạc (z-index: 100) */
+    transform: rotate(-90deg);
+    /* Xoay 180 độ */
+    z-index: 90;
+    /* Thấp hơn nút nhạc (z-index: 100) */
 }
+
 /* Map Button */
 .map-button {
     display: inline-block;
@@ -975,7 +1130,8 @@ html {
     border-radius: 25px;
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
-    margin-bottom: 50px; /* Khoảng cách trên để tách khỏi địa điểm */
+    margin-bottom: 50px;
+    /* Khoảng cách trên để tách khỏi địa điểm */
     transition: background 0.3s ease;
 }
 
@@ -986,34 +1142,65 @@ html {
     color: #D32F2F;
     transform: scale(1.05);
 }
+
+/* Map Button */
+.showalbum-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #D32F2F;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.showalbum-button:hover {
+    background: #B71C1C;
+    transform: translateY(-2px);
+    background: #FFD700;
+    color: #D32F2F;
+    transform: scale(1.05);
+}
+
 /* Overlay for blur effect */
 .overlay {
-    display: none; /* Ẩn mặc định */
+    display: none;
+    /* Ẩn mặc định */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Màu xám mờ */
-    backdrop-filter: blur(5px); /* Làm mờ nền */
-    z-index: 199; /* Dưới thông báo nhưng trên nội dung */
+    background: rgba(0, 0, 0, 0.5);
+    /* Màu xám mờ */
+    backdrop-filter: blur(5px);
+    /* Làm mờ nền */
+    z-index: 199;
+    /* Dưới thông báo nhưng trên nội dung */
 }
 
 /* Audio Notification */
 .audio-notification {
-    display: none; /* Ẩn mặc định */
+    display: none;
+    /* Ẩn mặc định */
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: rgba(255, 245, 245, 0.95); /* Nền hồng nhạt, mờ nhẹ */
+    background: rgba(255, 245, 245, 0.95);
+    /* Nền hồng nhạt, mờ nhẹ */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
-    z-index: 200; /* Trên overlay */
-    max-width: 350px; /* Tăng chiều rộng để chứa 2 nút ngang */
-    width: 100%; /* Đảm bảo sử dụng toàn bộ max-width */
+    z-index: 200;
+    /* Trên overlay */
+    max-width: 350px;
+    /* Tăng chiều rộng để chứa 2 nút ngang */
+    width: 100%;
+    /* Đảm bảo sử dụng toàn bộ max-width */
 }
 
 .audio-notification p {
@@ -1031,30 +1218,41 @@ html {
     border-radius: 20px;
     font-size: 0.9rem;
     cursor: pointer;
-    width: 100px; /* Chiều rộng cố định */
-    margin-right: 10px; /* Khoảng cách với nút "Không" bên phải */
+    width: 100px;
+    /* Chiều rộng cố định */
+    margin-right: 10px;
+    /* Khoảng cách với nút "Không" bên phải */
     transition: background 0.3s ease;
-    display: inline-block; /* Đảm bảo nút nằm ngang */
+    display: inline-block;
+    /* Đảm bảo nút nằm ngang */
 }
 
 .audio-notification .play-btn:hover {
-    background: #b71c1c; /* Màu tối hơn khi hover */
+    background: #b71c1c;
+    /* Màu tối hơn khi hover */
 }
 
 .audio-notification .close-btn {
-    background: #fff; /* Nền trắng */
-    color: #D32F2F; /* Chữ đỏ */
-    border: 2px solid #D32F2F; /* Viền đỏ */
+    background: #fff;
+    /* Nền trắng */
+    color: #D32F2F;
+    /* Chữ đỏ */
+    border: 2px solid #D32F2F;
+    /* Viền đỏ */
     padding: 8px 20px;
     border-radius: 20px;
     font-size: 0.9rem;
     cursor: pointer;
-    width: 100px; /* Chiều rộng cố định, bằng nút "Có" */
+    width: 100px;
+    /* Chiều rộng cố định, bằng nút "Có" */
     transition: background 0.3s ease, color 0.3s ease;
-    display: inline-block; /* Đảm bảo nút nằm ngang */
+    display: inline-block;
+    /* Đảm bảo nút nằm ngang */
 }
 
 .audio-notification .close-btn:hover {
-    background: #D32F2F; /* Nền đỏ khi hover */
-    color: #fff; /* Chữ trắng khi hover */
+    background: #D32F2F;
+    /* Nền đỏ khi hover */
+    color: #fff;
+    /* Chữ trắng khi hover */
 }
