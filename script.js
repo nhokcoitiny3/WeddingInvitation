@@ -144,8 +144,11 @@ const playMusic = () => {
             console.log("Autoplay bị chặn: ", error);
             isPlaying = false;
             toggleBtn.innerHTML = '<i class="fas fa-volume-mute"></i>';
-            audioNotification.style.display = 'block'; // Hiển thị thông báo
-            overlay.style.display = 'block'; // Hiển thị overlay mờ
+           
+            if (!localStorage.getItem('audioNotificationShown')) {
+                audioNotification.style.display = 'block';
+                overlay.style.display = 'block';
+            }
         });
 };
 
@@ -158,6 +161,7 @@ closeNotification.addEventListener('click', () => {
     overlay.style.display = 'none';
     isPlaying = false;
     toggleBtn.innerHTML = '<i class="fas fa-volume-mute"></i>';
+    localStorage.setItem('audioNotificationShown', 'true');
  
 });
 // Nút "Có" - Phát nhạc ngay
@@ -167,6 +171,7 @@ playMusicBtn.addEventListener('click', () => {
     isPlaying = true;
     audioNotification.style.display = 'none';
     overlay.style.display = 'none';
+    localStorage.setItem('audioNotificationShown', 'true');
 });
 // Music Control
 document.addEventListener('DOMContentLoaded', () => {
