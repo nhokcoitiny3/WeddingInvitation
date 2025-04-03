@@ -122,3 +122,28 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// Music Control
+document.addEventListener('DOMContentLoaded', () => {
+    const audio = document.getElementById('backgroundMusic');
+    const toggleBtn = document.getElementById('musicToggleBtn');
+    let isPlaying = true;
+
+    // Phát nhạc mặc định khi trang tải
+    audio.play().catch(error => {
+        console.log('Autoplay bị chặn:', error);
+    });
+
+    // Xử lý sự kiện bật/tắt nhạc
+    toggleBtn.addEventListener('click', () => {
+        if (isPlaying) {
+            audio.pause();
+            toggleBtn.innerHTML = '<i class="fas fa-volume-mute"></i>';
+            toggleBtn.classList.add('muted');
+        } else {
+            audio.play();
+            toggleBtn.innerHTML = '<i class="fas fa-volume-up"></i>';
+            toggleBtn.classList.remove('muted');
+        }
+        isPlaying = !isPlaying;
+    });
+});

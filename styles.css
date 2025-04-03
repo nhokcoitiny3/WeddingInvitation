@@ -835,3 +835,126 @@ html {
 .lg-thumb-item:hover {
     border-color: #D32F2F;
 }
+/* Music Toggle Button */
+.music-toggle-btn {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 50px;
+    height: 50px;
+    background: #D32F2F;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 100;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.music-toggle-btn:hover {
+    background: #FFD700;
+    color: #D32F2F;
+    transform: scale(1.1);
+}
+
+.music-toggle-btn.muted .fas {
+    content: '\f6a9'; /* Icon mute */
+}
+/* Thank You Section */
+.thankyou-section {
+    padding: 80px 20px;
+    background: #FFF5F5; /* Màu nền giống info-section */
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    min-height: 200px; /* Đảm bảo section có chiều cao tối thiểu */
+    overflow: visible; /* Ngăn nội dung bị cắt */
+}
+
+.thankyou-content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative; /* Đảm bảo nội dung nằm trên các phần tử khác */
+    z-index: 3;
+}
+
+.thankyou-content h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    color: #D32F2F;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.thankyou-content p {
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.8rem;
+    color: #D32F2F;
+    line-height: 1.4;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Thank You Section */
+@media (max-width: 1024px) {
+    .thankyou-section {
+        padding: 50px 15px;
+        min-height: 350px; /* Tăng chiều cao tối thiểu cho tablet */
+    }
+
+    .thankyou-content h2 {
+        font-size: 2rem;
+    }
+
+    .thankyou-content p {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .thankyou-section {
+        padding: 30px 10px;
+        min-height: 350px; /* Tăng chiều cao tối thiểu cho phone */
+    }
+
+    .thankyou-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .thankyou-content p {
+        font-size: 1.2rem;
+        padding: 0 10px; /* Thêm padding để tránh sát lề */
+    }
+}
+/* Section Separator */
+.section-separator {
+    display: block;
+    width: 75%; /* Tăng từ 50% lên 75% */
+    max-width: 900px; /* Tăng từ 600px lên 900px để phù hợp với tỷ lệ mới */
+    height: auto;
+    margin: 20px auto;
+    opacity: 0.8;
+}
+/* Corner Images */
+.corner-left {
+    position: absolute;
+    bottom: 10px; /* Cách đáy trang 10px */
+    left: 10px; /* Cách mép trái 10px */
+    width: 100px; /* Kích thước tùy ý */
+    height: auto;
+    z-index: 90; /* Thấp hơn nút nhạc (z-index: 100) */
+}
+
+.corner-right {
+    position: absolute;
+    bottom: 10px; /* Cách đáy trang 10px */
+    right: 10px; /* Cách mép phải 10px */
+    width: 100px; /* Kích thước tùy ý */
+    height: auto;
+    transform: rotate(-90deg); /* Xoay 180 độ */
+    z-index: 90; /* Thấp hơn nút nhạc (z-index: 100) */
+}
